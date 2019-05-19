@@ -84,6 +84,9 @@ contract SLCRVoting {
     // withdrawing tokens only not locked should be available
     require(voteTokenBalance[msg.sender] >= _numTokens, "Cannot withdraw more than used in the polls");
     voteTokenBalance[msg.sender] = voteTokenBalance[msg.sender].sub(_numTokens);
+
+    // Transfer tokens to the sender account
+    // voting contract is able to send the staked tokens to the sender
     require(token.transfer(msg.sender, _numTokens));
     emit _VotingRightsWithdrawn(_numTokens, msg.sender);
   }

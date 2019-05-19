@@ -7,13 +7,19 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "truffle test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.23.0",
+    "ethereumjs-abi": "^0.6.7",
+    "ethereumjs-testrpc": "^6.0.3",
+    "ethereumjs-wallet": "^0.6.3",
+    "ethjs-provider-http": "^0.1.6",
+    "ethjs-query": "^0.3.8",
+    "ethjs-rpc": "^0.2.0",
     "openzeppelin-solidity": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
